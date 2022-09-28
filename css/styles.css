@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Barlow";
+  color: hsl(213deg, 9%, 39%);
+}
+
+.img-desktop {
+  display: none;
+}
+
+header {
+  background-image: url("../images/mobile/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 2rem 1rem;
+  height: 500px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .links.hidden {
+  display: none;
+}
+header nav .links {
+  display: flex;
+  position: absolute;
+  top: 6rem;
+  left: 2rem;
+  right: 2rem;
+  background-color: hsl(0deg, 0%, 100%);
+  list-style: none;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  color: hsl(232deg, 10%, 55%);
+}
+header nav .links .contact {
+  background-color: hsl(51deg, 100%, 49%);
+  padding: 1rem;
+  border-radius: 2rem;
+  font-family: "Fraunces";
+  text-transform: uppercase;
+  color: hsl(212deg, 27%, 19%);
+}
+header nav .links::after {
+  content: "";
+  position: absolute;
+  border: 12px solid hsl(0deg, 0%, 100%);
+  border-left-color: transparent;
+  border-top-color: transparent;
+  right: 0;
+  top: -23px;
+}
+header div {
+  margin-top: 3rem;
+  display: grid;
+  gap: 2rem;
+  place-content: center;
+}
+header div h1 {
+  text-align: center;
+  font-family: "Fraunces";
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 900;
+  letter-spacing: 6px;
+}
+header div img {
+  display: block;
+  margin: auto;
+}
+
+main .text, main .graphic, main .photography {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+main .text h2, main .graphic h2, main .photography h2 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  color: hsl(212deg, 27%, 19%);
+  font-size: 2rem;
+}
+main .text p, main .graphic p, main .photography p {
+  line-height: 1.5;
+}
+main .text .learn, main .graphic .learn, main .photography .learn {
+  font-family: "Fraunces";
+  color: hsl(212deg, 27%, 19%);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+main .graphic, main .photography {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  height: 600px;
+}
+main .graphic {
+  background-image: url("../images/mobile/image-graphic-design.jpg");
+}
+main .graphic h2, main .graphic p {
+  color: #25564b;
+}
+main .photography {
+  background-image: url("../images/mobile/image-photography.jpg");
+}
+main .photography h2, main .photography p {
+  color: hsl(198deg, 62%, 26%);
+}
+main .testimonials {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+main .testimonials h2 {
+  font-family: "Fraunces";
+  color: hsl(210deg, 4%, 67%);
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+main .testimonials .testimonials-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+main .testimonials .testimonials-container .testimonials-t {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .testimonials .testimonials-container .testimonials-t img {
+  width: 5rem;
+  border-radius: 50%;
+}
+main .testimonials .testimonials-container .testimonials-t p {
+  margin: 2rem 0;
+  line-height: 1.5;
+}
+main .testimonials .testimonials-container .testimonials-t h3 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  color: hsl(212deg, 27%, 19%);
+}
+main .testimonials .testimonials-container .testimonials-t h4 {
+  color: hsl(210deg, 4%, 67%);
+}
+main .image-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer {
+  background-color: hsl(168deg, 34%, 61%);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+footer .logo {
+  filter: brightness(0) saturate(100%) invert(25%) sepia(52%) saturate(443%) hue-rotate(116deg) brightness(95%) contrast(87%);
+}
+footer .links ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  color: hsl(168deg, 34%, 41%);
+}
+footer .contact {
+  display: flex;
+  gap: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
