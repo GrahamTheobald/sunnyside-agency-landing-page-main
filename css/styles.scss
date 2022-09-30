@@ -11,6 +11,7 @@ $VeryDarkGrayishBlue: hsl(213, 9%, 39%);
 $DarkGrayishBlue: hsl(232, 10%, 55%);
 $GrayishBlue: hsl(210, 4%, 67%);
 $White: hsl(0, 0%, 100%);
+$Filter: hsla(0, 0%, 100%, 0.3);
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -19,6 +20,10 @@ $White: hsl(0, 0%, 100%);
 }
 img {
     max-width: 100%;
+}
+a, a:visited {
+    text-decoration: inherit;
+    color: inherit
 }
 body {
     font-family: 'Barlow';
@@ -209,5 +214,101 @@ footer {
     .contact {
         display: flex;
         gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .img-mobile {
+        display: none;
+    }
+    .img-desktop {
+        display: block;
+    }
+    header {
+        background-image: url(../images/desktop/image-header.jpg);
+        height: 600px;
+        h1 {
+            margin-bottom: 3rem;
+        }
+        nav {
+            .burger {
+                display: none;
+            }
+            .links.hidden {
+                display: flex;
+            }
+            .links::after {
+                display: none;
+            }
+            .links:hover {
+                cursor: pointer;
+            }
+            .links {
+                position: relative;
+                inset: 0 0 0 0;
+                background-color: transparent;
+                color: $White;
+                flex-direction: row;
+                padding: 0;
+                .contact {
+                    background-color: $White;
+                    color: $VeryDarkDesaturatedBlue;
+                    transition: all 0.2s linear;
+                }
+                .contact:hover {
+                    cursor: pointer;
+                    background-color: $Filter;
+                }
+            }
+        }
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .text {
+            place-content: center;
+            padding: 4rem;
+        }
+        .transform {
+            order: -1
+        }
+        .graphic,.photography {
+            background-position: center;
+            p {
+                width: 60%;
+            }
+        }
+        .graphic {
+            background-image: url(../images/desktop/image-graphic-design.jpg);
+        }
+        .photography {
+            background-image: url(../images/desktop/image-photography.jpg);
+        }
+        .testimonials {
+            grid-column: span 2;
+            padding: 7rem;
+            .testimonials-container {
+                flex-direction: row;
+            }
+        }
+        .image-gallery {
+            grid-column: span 2;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    footer {
+        .links {
+            a:hover {
+                cursor: pointer;
+                color: $White;
+    
+            }
+        }
+        .contact {
+            img:hover {
+                cursor: pointer;
+                filter: brightness(0%) saturate(100%) invert(99%) sepia(90%) saturate(0%) hue-rotate(144deg) brightness(109%) contrast(99%)
+            }
+        }
     }
 }

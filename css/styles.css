@@ -9,6 +9,11 @@ img {
   max-width: 100%;
 }
 
+a, a:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 body {
   font-family: "Barlow";
   color: hsl(213deg, 9%, 39%);
@@ -194,4 +199,89 @@ footer .contact {
   gap: 2rem;
 }
 
-/*# sourceMappingURL=styles.css.map */
+@media screen and (min-width: 600px) {
+  .img-mobile {
+    display: none;
+  }
+  .img-desktop {
+    display: block;
+  }
+  header {
+    background-image: url(../images/desktop/image-header.jpg);
+    height: 600px;
+  }
+  header h1 {
+    margin-bottom: 3rem;
+  }
+  header nav .burger {
+    display: none;
+  }
+  header nav .links.hidden {
+    display: flex;
+  }
+  header nav .links::after {
+    display: none;
+  }
+  header nav .links:hover {
+    cursor: pointer;
+  }
+  header nav .links {
+    position: relative;
+    inset: 0 0 0 0;
+    background-color: transparent;
+    color: hsl(0deg, 0%, 100%);
+    flex-direction: row;
+    padding: 0;
+  }
+  header nav .links .contact {
+    background-color: hsl(0deg, 0%, 100%);
+    color: hsl(212deg, 27%, 19%);
+    transition: all 0.2s linear;
+  }
+  header nav .links .contact:hover {
+    cursor: pointer;
+    background-color: hsla(0deg, 0%, 100%, 0.3);
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main .text {
+    place-content: center;
+    padding: 4rem;
+  }
+  main .transform {
+    order: -1;
+  }
+  main .graphic, main .photography {
+    background-position: center;
+  }
+  main .graphic p, main .photography p {
+    width: 60%;
+  }
+  main .graphic {
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+  }
+  main .photography {
+    background-image: url(../images/desktop/image-photography.jpg);
+  }
+  main .testimonials {
+    grid-column: span 2;
+    padding: 7rem;
+  }
+  main .testimonials .testimonials-container {
+    flex-direction: row;
+  }
+  main .image-gallery {
+    grid-column: span 2;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  footer .links a:hover {
+    cursor: pointer;
+    color: hsl(0deg, 0%, 100%);
+  }
+  footer .contact img:hover {
+    cursor: pointer;
+    filter: brightness(0%) saturate(100%) invert(99%) sepia(90%) saturate(0%) hue-rotate(144deg) brightness(109%) contrast(99%);
+  }
+}/*# sourceMappingURL=styles.css.map */
